@@ -31,12 +31,12 @@ def bad_request(error):
     message = str(error)
     app.logger.warning(message)
     return (
-        jsonify(
+jsonify(
 status=status.HTTP_400_BAD_REQUEST, 
 error="Bad Request", message=message
-        ),
-        status.HTTP_400_BAD_REQUEST,
-    )
+),
+status.HTTP_400_BAD_REQUEST,
+)
 
 
 @app.errorhandler(status.HTTP_404_NOT_FOUND)
